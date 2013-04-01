@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>RoboViz</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+
+<body>
+
+  <div class="menu">
+    <h1>RoboViz</h1>
+    <ul>
+      <li><a href="../">about</a></li>
+      <li><a href="../download/">download</a></li>
+      <li><a href="http://www.github.com/jstoecker/roboviz/" target="_blank">source code</a></li>
+      <li>getting started</li>
+      <li><a href="../drawing/">drawing</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <!--******************************************************************-->
+    <h1>Dependencies</h1>
+    <p>
+      If you plan to install RoboViz from source (recommended), the following
+      components should be installed:
+      <ul>
+        <li><a href="http://www.oracle.com/technetwork/java/javase/downloads/">Java Development Kit (JDK)</a></li>
+        <li><a href="http://git-scm.com">Git</a> (optional)</li>
+        <li><a href="http://ant.apache.org/">Apache Ant</a></li>
+      </ul>
+      Git is only necessary if you want to clone the repository; you can
+      download the source as a .zip file instead. Ant is a build tool that
+      replaces shell scripts and batch files from the previous version. I
+      suggest you use the Oracle JDK if possible (or Apple's JDK on OS X), as
+      I have not tested the pure open-source alternatives.
+    </p>
+    <!--******************************************************************-->
+    <h1>Install from Source</h1>
+    <p>
+      First, clone the git repository containing the latest source code by
+      entering the following into a shell:
+      <div class="code">
+        $ git clone --recursive git://github.com/jstoecker/roboviz.git<br>
+      </div>
+      Next, move into the root roboviz directory and compile the project:
+      <div class="code">
+        $ cd roboviz<br>
+        $ ant<br>
+      </div>
+      If successful, you should see a bin/ directory that contains roboviz.jar
+      and a lib/ subdirectory with other libraries. You can move the contents
+      of the bin/ directory anywhere you want; it does not reference any files
+      in the root roboviz directory.
+    </p>
+    <!--******************************************************************-->
+    <h1>Starting RoboViz</h1>
+    <p>
+      You can start RoboViz by executing roboviz.jar. From a terminal, you can
+      do the following:
+      <div class="code">
+        $ java -jar roboviz.jar
+      </div>
+      Some environments may allow you to double-click on roboviz.jar to launch
+      it.
+    </p>
+  </div>
+
+</body>
+
+</html

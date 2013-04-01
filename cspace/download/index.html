@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>C-Space</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+
+<body>
+
+  <div class="menu">
+    <h1>C-Space</h1>
+    <ul>
+      <li><a href="../">about</a></li>
+      <li>download</li>
+      <li><a href="http://www.github.com/jstoecker/cspace/" target="_blank">source code</a></li>
+      <li><a href="../documentation/">documentation</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <h1>Binary Distribution</h1>
+    <p>
+      This is a pre-compiled version that contains only the necessary files and
+      resources to run the software. You can run this on OS X, Windows, and
+      Linux.<br><br>
+      <a href="http://web.cs.miami.edu/home/jstoecker/software/cspace-04_01_2013.zip">cspace.zip</a> (modified 4-1-2013)
+    </p>
+    <p>
+    Note that you will need a recent version of Java (1.5, 1.6, or 1.7 should
+    work) and appropriate graphics hardware and drivers.
+    </p>
+    <h1>Source Distribution</h1>
+    <p>
+      To compile from source, you must have the following tools:
+      <ul>
+        <li><a href="http://ant.apache.org/">Apache Ant</a></li>
+        <li><a href="http://git-scm.com/">Git</a></li>
+        <li><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java Development Kit (JDK)</a></li>
+      </ul>
+      From the terminal or shell, clone the repository that contains the
+      source files:
+      <div class="code">
+        $ git clone --recursive git://github.com/jstoecker/cspace.git
+      </div>
+      Enter the root cspace directory ant compile it:
+      <div class="code">
+        $ cd cspace<br>
+        $ ant
+      </div>
+      Once this completes, you will have a bin directory that contains 
+      cspace.jar and a lib subdirectory. Read the <a href="../documentation/">
+      documentation</a> to learn how to execute the program.
+    </p>
+  </div>
+
+</body>
+
+</html

@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>C-Space</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+
+<body>
+
+  <div class="menu">
+    <h1>C-Space</h1>
+    <ul>
+      <li><a href="../">about</a></li>
+      <li><a href="../download">download</a></li>
+      <li><a href="http://www.github.com/jstoecker/cspace/" target="_blank">source code</a></li>
+      <li>documentation</li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <h1>Running the Software</h1>
+    <p>
+      The program is designed to visualized one configuration space scene at
+      a time. A scene contains the configuration space representation,
+      the robot representation, the obstacle representation, and a polygonal
+      path for the robot. Currently, you specify the scene when launching the
+      software through a command-line argument.
+    </p>
+    <p>
+      From a terminal (or command prompt on Windows), enter the cspace
+      directory containing cspace.jar. Type the following:
+      <div class="code">
+        $ java -Xmx512m -jar cspace.jar &lt;path_to_scene&gt;
+      </div>
+      where &lt;path_to_scene&gt; is a directory containing a cspace and path
+      file. The available scenes include:
+      <ul>
+        <li>scenes/2rooms</li>
+        <li>scenes/2rooms_linear</li>
+        <li>scenes/3pin</li>
+        <li>scenes/5star</li>
+        <li>scenes/7pin</li>
+      </ul>
+    </p>
+    <div class="figure">
+      <img src="img/scenes.png" height="150" /><br>
+      Scenes from left to right: 2rooms, 3pin, 5star, 7pin. The robot outline
+      is shown in blue, and the obstacle is gray.
+    </div>
+    <h1>User Interface</h1>
+    <p>
+      The main application window has four main widgets:
+      <ul>
+        <li>The 2D/3D rendering panel is located at the center.</li>
+        <li>The settings button is at the bottom left.</li>
+        <li>The motion planning button is to the right of the settings.</li>
+        <li>The path slider is at the bottom.</li>
+      </ul>
+      Initially, the software should display both the 2D and 3D views in the
+      rendering panel. The 2D viewport and 3D viewport refer to the portions
+      of this panel that contain the 2D or 3D illustrations respectively.
+    </p>
+    <h2>2D View Controls</h2>
+    <p>
+      When the mouse cursor is inside the 3D viewport, the following operations
+      can be performed:
+      <ul>
+        <li>
+          Camera translation: hold the W, A, S, D keys to move the camera
+          forward, left, back, and right respectively.
+        </li>
+        <li>
+          Camera rotation: left-click and drag the mouse to rotate the camera.
+        </li>
+      </ul>
+    </p>
+    <h2>Robot Controls</h2>
+    <p>
+      The robot can be in path mode or free mode. When path mode is active, the
+      slider widget at the bottom of the window adjusts the robot's progress
+      along a fixed path; when path mode is inactive, the slider widget
+      controls the robot's rotation. The robot can be translated by holding the
+      shift key and performing a left-click drag with the mouse in the 2D
+      viewport.
+    </p>
+    <h2>Settings</h2>
+    <p>
+      The settings frame can be opened by clicking the button on the bottom
+      left of the window (gear icon). Settings are categorized by geometry
+      type and affect how various parts are drawn. Many of these settings
+      should be self-explanatory, however note the following important ones:
+      <ul>
+        <li>General -- Viewing Mode: view only 2D, only 3D, or both</li>
+        <li>Subs -- Rendering Style: changes how the surface is drawn in 3D</li>
+        <li>Robot -- Use Path: if checked, slider uses the robot's path</li>
+      </ul>
+    </p>
+    <h2>Motion Planning</h2>
+    <p>
+      WARNING: the custom motion planning does not check for invalid
+      configurations and will throw exceptions in the terminal if a path cannot
+      be created. This feature is experimental and not well tested.
+    </p>
+    <p>
+      Each scene comes with a default path for the robot. To create a custom
+      path, first click the motion planning button (turning arrow icon). This
+      button should appear depressed while you set the start and end
+      configurations. To set the start configuration, hold the shift key, use
+      the left-click mouse drag to set the position and mouse wheel for
+      rotation. To set the end configuration, hold the alt key, use the
+      left-click mouse drag to set the position and mouse wheel for rotation.
+    </p>
+    <p>
+      Once finished, click the motion planning button again. The robot path
+      should be updated.
+    </p>
+  </div>
+
+</body>
+
+</html

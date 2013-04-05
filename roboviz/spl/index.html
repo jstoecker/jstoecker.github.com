@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>RoboViz</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+
+<body>
+
+  <div class="menu">
+    <h1>RoboViz</h1>
+    <ul>
+      <li><a href="../">about</a></li>
+      <li><a href="../download/">download</a></li>
+      <li><a href="http://www.github.com/jstoecker/roboviz/" target="_blank">source code</a></li>
+      <li><a href="../getting_started/">getting started</a></li>
+      <li><a href="../drawing/">drawing</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <!--******************************************************************-->
+    <h1>Standard Platform League</h1>
+    <p>The SPL robot model format is a UDP message formatted as follows:</p>
+    <p class="code">
+      id<br>
+      torso x<br>
+      torso y<br>
+      torso z<br>
+      forward x<br>
+      forward y<br>
+      forward z<br>
+      up x<br>
+      up y<br>
+      up z<br>
+      head_yaw<br>
+      head_pitch<br>
+      l_shoulder_pitch<br>
+      l_shoulder_roll<br>
+      l_elbow_yaw<br>
+      l_elbow_roll<br>
+      r_shoulder_pitch<br>
+      r_shoulder_roll <br>
+      r_elbow_yaw<br>
+      r_elbow_roll<br>
+      l_hip_yawpitch<br>
+      l_hip_roll<br>
+      l_hip_pitch<br>
+      l_knee_pitch<br>
+      l_ankle_pitch<br>
+      l_ankle_roll<br>
+      r_hip_yawpitch<br>
+      r_hip_roll<br>
+      r_hip_pitch<br> 
+      r_knee_pitch<br>
+      r_ankle_pitch<br>
+      r_ankle_roll<br>
+    </p>
+    <ul>
+      <li>The ID is a single byte, and it is the robot number in [0,4].</li>
+      <li>All other values are floats and encoded as 6-byte floats (same as
+          drawing protocol</li>
+      <li>All joints are in radians</li>
+      <li>Total message size = 1 byte + 31 * 6 bytes = 187 bytes</li>
+    </ul>
+  </div>
+
+</body>
+
+</html

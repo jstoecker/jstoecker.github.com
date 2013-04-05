@@ -61,10 +61,25 @@
     <ul>
       <li>The ID is a single byte, and it is the robot number in [0,4].</li>
       <li>All other values are floats and encoded as 6-byte floats (same as
-          drawing protocol</li>
+          drawing protocol)</li>
       <li>All joints are in radians</li>
       <li>Total message size = 1 byte + 31 * 6 bytes = 187 bytes</li>
+      <li>For now, the SPL version of roboviz is hard-coded to use port 32888
+          for the robot message.</li>
     </ul>
+    <h2>Download / Compile</h2>
+    <p>
+      Here's how you get the correct branch and run everything. This will clone
+      the repository using the dev branch (unstable/testing) that I am working
+      on:
+    </p>
+    <div class="code">
+      $ git clone --recursive https://github.com/jstoecker/roboviz.git -b dev
+    </div>
+    <p>Then, move into the directory and compile:</p> 
+    <div class="code">$ cd roboviz<br>$ ant</div>
+    <p>Finally, start the program (must do this from root dir):</p>
+    <div class="code">$ java -jar bin/roboviz.jar</div>
   </div>
 
 </body>

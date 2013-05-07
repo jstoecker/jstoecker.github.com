@@ -25,96 +25,56 @@
       The program is designed to visualized one configuration space scene at
       a time. A scene contains the configuration space representation,
       the robot representation, the obstacle representation, and a polygonal
-      path for the robot. Currently, you specify the scene when launching the
-      software through a command-line argument.
+      path for the robot. Refer to the following video for instructions on how
+      to start the software.
     </p>
-    <p>
-      From a terminal (or command prompt on Windows), enter the cspace
-      directory containing cspace.jar. Type the following:
-      <div class="code">
-        $ java -Xmx512m -jar cspace.jar &lt;path_to_scene&gt;
-      </div>
-      where &lt;path_to_scene&gt; is a directory containing a cspace and path
-      file. The available scenes include:
-      <ul>
-        <li>scenes/2rooms</li>
-        <li>scenes/2rooms_linear</li>
-        <li>scenes/3pin</li>
-        <li>scenes/5star</li>
-        <li>scenes/7pin</li>
-      </ul>
-    </p>
-    <div class="figure">
-      <img src="img/scenes.png" height="150" /><br>
-      Scenes from left to right: 2rooms, 3pin, 5star, 7pin. The robot outline
-      is shown in blue, and the obstacle is gray.
-    </div>
+
+<center><iframe width="560" height="315" src="http://www.youtube.com/embed/vKH6lwpGL5w" frameborder="0" allowfullscreen></iframe></center>
+
     <h1>User Interface</h1>
     <p>
-      The main application window has four main widgets:
-      <ul>
-        <li>The 2D/3D rendering panel is located at the center.</li>
-        <li>The settings button is at the bottom left.</li>
-        <li>The motion planning button is to the right of the settings.</li>
-        <li>The path slider is at the bottom.</li>
-      </ul>
-      Initially, the software should display both the 2D and 3D views in the
-      rendering panel. The 2D viewport and 3D viewport refer to the portions
-      of this panel that contain the 2D or 3D illustrations respectively.
-    </p>
+      Refer to the following video which covers the main features of the software. A short summary of the controls
+      is provided below.
+    </p> 
+
+<center><iframe width="560" height="315" src="http://www.youtube.com/embed/N6y3ldNzYQI" frameborder="0" allowfullscreen></iframe></center>
+
     <h2>2D View Controls</h2>
+    <p>
+      When the mouse cursor is inside the 2D viewport, the following operations
+      can be performed:
+      <ul>
+        <li>Camera pan: left-click and drag the mouse cursor.</li>
+        <li>Camera zoom: scroll the mouse wheel.</li>
+        <li>Robot translation: hover over the robot's origin, then left-click and drag.</li>
+        <li>Robot rotation: hover over the robot's origin, then right-click and drag.</li>
+      </ul>
+    </p>
+    <h2>3D View Controls</h2>
     <p>
       When the mouse cursor is inside the 3D viewport, the following operations
       can be performed:
       <ul>
-        <li>
-          Camera translation: hold the W, A, S, D keys to move the camera
-          forward, left, back, and right respectively.
-        </li>
-        <li>
-          Camera rotation: left-click and drag the mouse to rotate the camera.
-        </li>
+        <li>Camera rotation: left-click and drag.</li>
+        <li>Camera translation: hold the W, A, S, or D keys to move forward, left, back, or right.</li>
       </ul>
     </p>
-    <h2>Robot Controls</h2>
+    <h2>Other Controls</h2>
     <p>
-      The robot can be in path mode or free mode. When path mode is active, the
-      slider widget at the bottom of the window adjusts the robot's progress
-      along a fixed path; when path mode is inactive, the slider widget
-      controls the robot's rotation. The robot can be translated by holding the
-      shift key and performing a left-click drag with the mouse in the 2D
-      viewport.
+      Each scene has a default path for the robot. Use the slider at the bottom of the window to move the robot
+      along this path.
     </p>
-    <h2>Settings</h2>
-    <p>
-      The settings frame can be opened by clicking the button on the bottom
-      left of the window (gear icon). Settings are categorized by geometry
-      type and affect how various parts are drawn. Many of these settings
-      should be self-explanatory, however note the following important ones:
-      <ul>
-        <li>General -- Viewing Mode: view only 2D, only 3D, or both</li>
-        <li>Subs -- Rendering Style: changes how the surface is drawn in 3D</li>
-        <li>Robot -- Use Path: if checked, slider uses the robot's path</li>
-      </ul>
-    </p>
-    <h2>Motion Planning</h2>
+    <h2>Path Planning</h2>
     <p>
       WARNING: the custom motion planning does not check for invalid
-      configurations and will throw exceptions in the terminal if a path cannot
-      be created. This feature is experimental and not well tested.
+      configurations and will not provide warnings if a path is not found. 
+      This feature is experimental and not well tested.
     </p>
     <p>
-      Each scene comes with a default path for the robot. To create a custom
-      path, first click the motion planning button (turning arrow icon). This
-      button should appear depressed while you set the start and end
-      configurations. To set the start configuration, hold the shift key, use
-      the left-click mouse drag to set the position and mouse wheel for
-      rotation. To set the end configuration, hold the alt key, use the
-      left-click mouse drag to set the position and mouse wheel for rotation.
-    </p>
-    <p>
-      Once finished, click the motion planning button again. The robot path
-      should be updated.
+      Click the arrow button (third from left) to enable path planning mode. At any point, press the ESCAPE key
+      to cancel path planning mode. Set the starting configuration for the robot in the 2D view, then press ENTER.
+      Set the ending configuration for the robot in the 2D view, then press ENTER. A new path will be created, and
+      path planning mode is deactivated.
     </p>
   </div>
 
